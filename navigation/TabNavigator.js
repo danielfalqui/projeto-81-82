@@ -6,7 +6,7 @@ import CreatePost from "../screens/CreatePost";
 import Profile from "../screens/Profile";
 const Tab = createMaterialBottomTabNavigator();
 
-
+//Parabéns por ter usado  o material bottom tab navigator, gosteio da ousadia
 const BottomTabNavigator = () => {
     return (
       <Tab.Navigator
@@ -32,8 +32,11 @@ const BottomTabNavigator = () => {
             );
           }
         })}
-        activeColor={"#ee8249"}
-        inactiveColor={"gray"}
+        //Aqui está faltando o TabBarOptions
+        TabBarOptions = {{
+            activeColor={"#ee8249"}
+            inactiveColor={"gray"}
+         }}
       >
         <Tab.Screen name="Feed" component={Feed} options={{headerShown:false}}/>
         <Tab.Screen name="Criar História" component={CreateStory} options={{headerShown:false}}/>
